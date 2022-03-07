@@ -37,8 +37,8 @@ ID=135170 中的 about_Execution_Policies。
 + ganache-cli
 + ~~~~~~~~~~~
     + CategoryInfo          : SecurityError: (:) []，PSSecurityException
-    + FullyQualifiedErrorId : UnauthorizedAccess)
-    
+    + FullyQualifiedErrorId : UnauthorizedAccess
+）
   进入此https:/go.microsoft.com/fwlink/?LinkID=135170网址，以管理员身份运行powershell，输入Set-ExecutionPolicy -ExecutionPolicy RemoteSigned 便可以运行本地脚本。
   然后重新运行testrpc或者ganache-cli就成功创建本地区块链环境了。
   
