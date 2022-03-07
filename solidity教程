@@ -1,3 +1,91 @@
 solidity本地开发环境搭建
 
+第1章、以太坊智能合约开发环境
+(1) Solidity简单介绍
+Solidity是一种智能合约开发语言，被应用于各种不同的区块链平台。
+目前绝大部分的区块链应用的智能合约(尤其是以太坊上）是通过Solidity完成开发的。
 
+
+solidity合约本地开发最简单的环境搭建
+（1）需要的工具
+- Node.js
+- Solidity 编译器，作为npm软件包
+- Visual Studio Code插件的语法突出显示
+-为开发人员构建的以太坊客户端ethereumjs-testrpc
+
+（2）安装solidity编译器（前提是Node.js已经安装好）
+npm install -g solc
+
+（3）查看版本
+solcjs -V
+
+（4）安装solidity插件
+使用VS Code进行solidity合约编写
+
+（5）安装以太坊的客户端
+npm install -g ethereumjs-testrpc
+
+最新版本可以使用ganache-cli
+
+npm install -g ganache-cli
+
+（6）创建本地区块链环境  
+testrpc或者ganache-cli                 
+
+(到此处后运行报错，报错原因是ganache-cli : 无法加载文件 C:\Users\40318\AppData\Roaming\npm\ganache-cli.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:/go.microsoft.com/fwlink/?Link
+ID=135170 中的 about_Execution_Policies。
++ ganache-cli
++ ~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess)
+    
+  进入此https:/go.microsoft.com/fwlink/?LinkID=135170网址，以管理员身份运行powershell，输入Set-ExecutionPolicy -ExecutionPolicy RemoteSigned 便可以运行本地脚本。
+  然后重新运行testrpc或者ganache-cli就成功创建本地区块链环境了。
+  
+ 运行结果
+  Ganache CLI v6.12.2 (ganache-core: 2.13.2)
+
+Available Accounts
+==================
+(0) 0x95fF0d42093c2C67395619D44056DFeBfB7b7B38 (100 ETH)
+(1) 0x9a16D06292B5eC237BE481B1494930E3571C225f (100 ETH)
+(2) 0x9FCCAaf1A2e35aDF96cF1C5d61290d1F5F252765 (100 ETH)
+(3) 0x245Db9fDe027192aA584f0ACE5fe20073019323c (100 ETH)
+(4) 0x1861d330a498Cfa16C6374288eb7014F27f17391 (100 ETH)
+(5) 0xC3111621c748B28B178fDFf69C241cEAC91110a8 (100 ETH)
+(6) 0xC62bf74DD14e3375dfEF5202f8f84B7A778E9FBa (100 ETH)
+(7) 0x26fED2Af3c8685f9c9ec8F3eB731b181ddC64770 (100 ETH)
+(8) 0x32b3269A1764AE2c4E8D27495d6e11E6635AeF0e (100 ETH)
+(9) 0x29e552C9ec6581891c6df2f47631Ba3Eb096cA33 (100 ETH)
+
+Private Keys
+==================
+(0) 0xb4dec4138c7c89817554e224899832666e8b07bf4018c3168be54d524b34fc23
+(1) 0xd9d0daf47b74bf3194165cd7ee427c97f2ead29187597347a29305b2e1b363f9
+(2) 0x67cf468ea3c86965d32df7ce591fd420e279c625eba290bff4add80770f1a272
+(3) 0x5f566ccf8739b81c44186740378f18da95ac446dbf8bb54208d69ef9bc9e8358
+(4) 0x872cb8ed6aafc811c7f9291056f2bcd8584713c0ef8e258f652122c8e0381565
+(5) 0x315ec76e172bd3fbc7803ea03e5be38100cc5593af95e2f46feacd7e21e605fd
+(6) 0x29c9543f90d33cb4bd2fe6d49adc712ed6629a6ae194f2da70ac1adc6f5c8cca
+(7) 0xeaf9969e4bb5ae1475bb4b82ed7e5352b0fbab2adc2c7e7338795a8c58a22755
+(8) 0xe343363e70a8ea9c51027e68f8b23198de607fc29325b76648e1d9d1faf33344
+(9) 0xed17fa2c7d7feb652c19cd1a4c8ab89caf6fec886e56e7ecbaf9d2ebb76212e5
+
+HD Wallet
+==================
+Mnemonic:      accuse music march faculty child shock speak board million cross analyst effort
+Base HD Path:  m/44'/60'/0'/0/{account_index}
+
+Gas Price
+==================
+20000000000
+
+Gas Limit
+==================
+6721975
+
+Call Gas Limit
+==================
+9007199254740991
+
+Listening on 127.0.0.1:8545
