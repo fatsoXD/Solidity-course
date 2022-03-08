@@ -89,3 +89,38 @@ Call Gas Limit
 9007199254740991
 
 Listening on 127.0.0.1:8545
+
+
+(2)编写最简单的helloworld合约
+pragma solidity ^0.8.12;
+// SPDX-License-Identifier: MIT
+contract MyContract {
+    function helloWorld() public pure returns (string memory) {
+        return "Hello, World!";
+    }
+}
+
+
+
+
+在终端输入：solcjs .\HelloWorld.sol 调用编译器进行编译。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
